@@ -1,0 +1,37 @@
+<%= link_to order do %>
+  <div class="list-order">
+    <span class="list-order--date">
+      <%= order.created_at.to_fs(:short) %> 
+    </span>
+
+    <span class="list-order--id">
+      <%= "Pesanan##{order.id}" %> 
+    </span>
+
+    <div class="list-order--customer">
+      <%= order.customer.name%>
+    </div>
+
+    <% order.order_items.each do |item| %>
+      <span class="list-order--item">
+        <%= item.product.name %>
+      </span>
+
+      <span class="list-order--quantity">
+        <%= "x#{item.quantity};" %>
+      </span>
+
+      <span class="list-order--item">
+        <%= "ukuran #{item.product.size};" %>
+      </span>
+
+    <% end %>
+
+    <span class="list-order--customer">
+      <%= "Total: #{number_to_currency(order.total_amount, precision: 0, unit: "Rp", delimiter: ".")}" %>
+    </span>
+
+   </div>
+<% end %>
+
+

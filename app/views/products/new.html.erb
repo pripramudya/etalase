@@ -1,0 +1,11 @@
+<% content_for :title, "New product" %>
+
+<div>
+  <%= link_to "<- Balik ke Daftar Produk", products_path %>
+</div>
+
+<h3>Buat Produk</h3>
+
+<%= render partial: "form", locals: { product: @product, submit_label: "Buat produk"} %>
+
+

@@ -1,0 +1,32 @@
+<%= form_with(model: customer) do |form| %>
+  <% if customer.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+        <% customer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, "Nama Pelanggan", style: "display: block" %>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :contact, "Nomor HP", style: "display: block" %>
+    <%= form.number_field :contact, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :address, "Alamat", style: "display: block" %>
+    <%= form.textarea :address, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

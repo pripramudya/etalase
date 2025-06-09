@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Customers" %>
+
+<h3>Daftar Pelanggan</h3>
+
+<div class="title">
+  <%= link_to "[+] Pelanggan", new_customer_path, class:"far-right" %>
+</div>
+
+<div class="products">
+  <% @customers.each do |customer| %>
+    <%#= render product %>
+    <%= link_to customer.name, customer, class:"list-product" %>
+  <% end %>
+</div>

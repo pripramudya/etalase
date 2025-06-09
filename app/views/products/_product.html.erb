@@ -1,0 +1,29 @@
+<div id="<%= dom_id product %>"; class="list">
+  <p>
+    <strong><%= product.name %></strong>
+  </p>
+
+  <p>
+    Harga:
+    <%= product.price %>
+  </p>
+
+  <p>
+    Profit:
+    <%= product.profit %>
+  </p>
+
+  <p>
+    Kategori:
+    <%= product.category %>
+  </p>
+
+  <p>
+    Ukuran:
+    <%= product.size %>
+  </p>
+
+  <p>
+    <%= link_to "Ubah Produk", edit_product_path(@product) %> 
+  </p>
+</div>

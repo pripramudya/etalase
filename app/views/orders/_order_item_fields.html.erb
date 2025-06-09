@@ -1,0 +1,14 @@
+<div class="nested-fields">
+  <div>
+    <%= form.label :product_id %>
+    <%= form.collection_select :product_id, Product.all, :id, :name, include_blank: "Pilih Produk" %>
+  </div>
+  <div>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, min: 1 %>
+  </div>
+  <div>
+    <%= form.label :_destroy, 'Hapus Item' %>
+    <%= form.check_box :_destroy %>
+  </div>
+</div>

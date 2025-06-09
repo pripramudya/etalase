@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <%= link_to "<- Balik ke Daftar Produk", products_path %>
+</div>
+
+<h3>Lihat Detil Produk</h3>
+
+<%= render @product %>
+
+<div>
+  <%= button_to "Hapus Produk", @product, method: :delete %>
+</div>

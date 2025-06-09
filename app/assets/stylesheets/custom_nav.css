@@ -1,0 +1,33 @@
+body {
+  /* Beri ruang di bawah agar konten tidak tertutup nav */
+  padding-bottom: 60px; /* Sesuaikan tinggi nav + sedikit margin */
+}
+
+.bottom-nav {
+  position: fixed; /* Tetap di posisi yang sama saat scroll */
+  bottom: 0;       /* Tempel di bagian bawah */
+  left: 0;
+  width: 100%;     /* Lebar penuh */
+  background-color: #f8f8f8; /* Warna latar (sesuaikan) */
+  border-top: 1px solid #e7e7e7; /* Garis pemisah atas */
+  padding: 10px 0;
+  display: flex; /* Susun link secara horizontal */
+  justify-content: space-around; /* Beri jarak antar link */
+  align-items: center;
+  z-index: 1000; /* Pastikan nav di atas konten lain */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Bayangan (opsional) */
+}
+
+.bottom-nav a {
+  color: #333; /* Warna link (sesuaikan dengan Water.css jika perlu) */
+  text-decoration: none;
+  padding: 5px 10px;
+  /* Tambahkan style lain jika perlu (misal: icon) */
+}
+
+/* Style untuk konten utama agar tidak terlalu lebar di desktop (opsional) */
+main {
+  max-width: 800px; /* Batasi lebar konten */
+  margin: 0 auto; /* Tengahlan konten */
+  padding: 15px;
+}

@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "orders" %>
+
+<h3>Daftar Pesanan</h3>
+
+<div class="title">
+  <%= link_to "[+] Pesanan", new_order_path, class:"far-right" %>
+</div>
+
+
+<p> Total Jumlah Pesanan: <%=  @total_order_number %> </p>
+<p> Total Pesanan: 
+    <%= number_to_currency(@total_order_amount, precision: 0, unit: "Rp", delimiter: ".") %>
+</p>
+
+
+<div class="products">
+  <% @orders.each do |order| %>
+    <%#= link_to "Pesanan##{order.id}", order, class:"list-product" %>
+    <%= render order %>
+  <% end %>
+</div>
+

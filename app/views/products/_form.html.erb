@@ -1,0 +1,42 @@
+<%= form_with(model: product) do |form| %>
+  <% if product.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, "Nama Produk", style: "display: block" %>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :price, "Harga", style: "display: block" %>
+    <%= form.number_field :price, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :profit, style: "display: block" %>
+    <%= form.number_field :profit, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :category, "Kategori", style: "display: block" %>
+    <%= form.select :category, ["Baju", "Jaket", "Sepatu", "Kaos"] %>
+  </div>
+
+  <div>
+    <%= form.label :size, "Ukuran", style: "display: block" %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div>
+    <%= form.submit (submit_label || "Kirim") %>
+  </div>
+<% end %>

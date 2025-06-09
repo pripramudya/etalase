@@ -1,0 +1,54 @@
+
+.products {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+
+  & a {
+  text-decoration: none;
+  color: var(--text-main);
+  }
+
+}
+
+.list-product {
+  display: block;
+  border: 1px solid var(--border);
+  padding: 12px 24px;
+}
+
+a.list-product {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.list-order {
+  display: block;
+  border: 1px solid var(--border);
+  padding: 12px 24px;
+  line-height: 16px;
+
+}
+
+.list-order--id {
+  font-size: 12px;
+  color: var(--text-muted);
+  float: right;
+}
+
+.list-order--date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.list-order--customer {
+  color: var(--text-bright);
+}
+
+.title {
+  display: flex;
+  padding-bottom: 12px;
+}
+
+.far-right { margin-left: auto; }
+
